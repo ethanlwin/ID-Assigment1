@@ -58,22 +58,25 @@
 
 .textoverlay1 {
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   padding: 10px;
   text-align: center;
+  font-size: 40px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
-
-
+body {
+  margin: 0;
+}
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color:#333;
   color: #fff;
   text-align: center;
   padding: 20px;
