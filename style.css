@@ -1,12 +1,80 @@
-body {
-  font-family: sans-serif;
-}
-
-header {
+.top-bar {
   background-color: #333;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-nav {
-  float: right;
+.logo {
+  flex: 1;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.nav-links a {
+  text-decoration:none;
+  color: #fff;
+  padding: 10px;
+  margin: 0 10px;
+}
+@media (max-width: 576px) {
+  /* Make the top bar and nav link gaps smaller on mobile devices */
+  .top-bar {
+    height: 40px;
+  }
+
+  .nav-links a {
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Make the top bar and nav link gaps larger on tablets and desktop devices */
+  .top-bar {
+    height: 60px;
+  }
+
+  .nav-links a {
+    margin: 0 20px;
+  }
+}
+.container {
+  position: relative;
+}
+
+.textoverlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
