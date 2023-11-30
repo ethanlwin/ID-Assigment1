@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class = "page" id = "home">
 <head>
   <title>GameGearhouse</title>
   <link rel ="normalize" href="normalize.css">
@@ -12,20 +12,26 @@
       <a href="#">GameGearhouse</a>
     </div>
     <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Top Sellers</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="#home">Home</a>
+      <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="#products">Products</a>
+      <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="#topsell">Top Sellers</a>
+      <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="#about">About</a>
+      <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="#contact">Contact</a>
     </nav>
   </header>
 <div class = "container">
-  <img src = "gamingequipment.jpg" alt="Image1" id="myImage1" style="width: 100%; max-width: 100%; height: 150px; object-fit: cover;">
+  <img src = "gamingequipment.jpg" alt="Image1" id="pic1" style="width: 100%; max-width: 100%; height: 150px; object-fit: cover;">
   <div class="textoverlay1">
     <p>Find the newest and best equipment here</p>
   </div>
 </div>
-
+<section class="post">
+  <figure>
+      <img src="mousepic1.jpg" alt="mouse1">
+  </figure>
+  <h2>Mice</h2>
+  <button class = "textoverlay2">View Products</button>
+</section>
 
   <footer class="footer">
     <p>Copyright &copy; 2023 GameGearhouse</p>
@@ -35,3 +41,11 @@
 
 
 
+
+
+
+<html class = "page" id = "about">
+  <section id = "about">
+    <p></p>
+  </section>
+</html>
