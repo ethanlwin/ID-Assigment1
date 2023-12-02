@@ -14,68 +14,85 @@
     <nav class="nav-links">
       <a id="home-link" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="index.html">Home</a>
       <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="products.html">Products</a>
-      <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="topsell.html">Top Sellers</a>
       <a id="about-link" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="about.html">About</a>
       <a onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="contact.html">Contact</a>
-      <a id="signin-link" onclick="openSignInModal()" >Sign In</a>
+      <a id="signin-link" href="signin.html" >Sign In</a>
     </nav>
   </header>
-  <div class="signin-modal" id="signinModal">
-    <div class="modal-content">
-      <span class="close" onclick="closeSignInModal()">&times;</span>
-      <h2>Sign In</h2>
-      <form onsubmit="signIn(event)">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required>
-  
-        <label for="password">Password:</label>
-        <input type="password" id="password" required>
-  
-        <button type="submit">Sign In</button>
-      </form>
-    </div>
-  </div>
   <div class = "container">
-    <img src = "gamingequipment.jpg" alt="Image1" id="pic1" style="width: 100%; max-width: 100%; height: 150px; object-fit: cover;">
+    <img src = "images/gamingequipment.jpg" alt="Image1" id="pic1" style="width: 100%; max-width: 100%; height: 150px; object-fit: cover;">
     <div class="textoverlay1">
       <p>Find the newest and best equipment here</p>
     </div>
   </div>
-  <mainpage>
+  <section class ="slider">
+    <h1 class = "slider-heading">Our all time favourites</h1>
+    <button class="bck"><img src="images/arrow1.png" alt = ""></button>
+    <button class="nxt"><img src="images/arrow1.png" alt = ""></button>
+
     <div class="products-container">
       <section class= "product">
       <figure>
-        <img src="mousepic1.jpg" alt="mouse1" class="post1">
+        <img src="images/mousepic1.jpg" alt="mouse1" class="product-thumb">
       </figure>
-      <h2>Mice</h2>
+      <h2 class="textoverlay2">Mice</h2>
       <button class = "textoverlay2">View Products</button>
     </section>
     <section class="product">
       <figure>
-      <img src="mousebungee1.jpg" alt="mousebungee1" class="post2">
+      <img src="images/mousebungee1.jpg" alt="mousebungee1" class="product-thumb">
     </figure>
-    <h2>Accessories</h2>
+    <h2 class="textoverlay2">Accessories</h2>
     <button class = "textoverlay2">View Products</button>
   </section>
   <section class="productkeyb">
     <figure>
-    <img src="keyboard1.jpg" alt="keyboard1" class="post3">
+    <img src="images/keyboard1.jpg" alt="keyboard1" class="product-thumb">
   </figure>
-  <h2>Keyboards</h2>
+  <h2 class="textoverlay2">Keyboards</h2>
   <button class = "textoverlay2">View Products</button>
 </section>
 <section class="productmon">
   <figure>
-  <img src="monitor1.jpg" alt="monitor1" class="post4">
+  <img src="images/monitor1.jpg" alt="monitor1" class="product-thumb">
 </figure>
-<h2>Monitors</h2>
+<h2 class="textoverlay2">Monitors</h2>
+<button class = "textoverlay2">View Products</button>
+</section>
+<section class="productdm">
+  <figure>
+  <img src="images/deskmat1.jpg" alt="deskamat1" class="product-thumb">
+</figure>
+<h2 class="textoverlay2">Deskmats</h2>
+<button class = "textoverlay2">View Products</button>
+</section>
+<section class="productkeyb">
+  <figure>
+  <img src="images/keyboardkit.jpg" alt="keyboardkit" class="product-thumb">
+</figure>
+<h2 class="textoverlay2">Keyboard Building Kits</h2>
 <button class = "textoverlay2">View Products</button>
 </section>
 </div>
-</mainpage>
+  </section>
+
+  <section class = slider>
+    <h1 class = "slider-heading">Brands we work with</h1>
+    <button class="bck"><img src="images/arrow1.png" alt = ""></button>
+    <button class="nxt"><img src="images/arrow1.png" alt = ""></button>
+    <div class="products-container">
+      <section class= "product">
+      <figure>
+        <img src="images/ducky.png" alt="ducky" class="product-thumb">
+      </figure>
+      <h2 class="textoverlay2">Ducky</h2>
+    </section>
+    </div>
+  </section>
 
   <footer class="footer">
-    <p>Copyright &copy; 2023 GameGearhouse</p>
+    <p class="address">1 ABC Road, Level 1 Unit 01</p>
+    <p style="font-family: monospace; font-size: 30px;">2023 GameGearhouse</p>
   </footer>
 </body>
 </html>

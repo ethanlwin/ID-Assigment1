@@ -1,4 +1,5 @@
 
+
 .top-bar {
   background-color: #333;
   color: #fff;
@@ -15,7 +16,7 @@
 .logo a {
   text-decoration: none;
   color: #fff;
-  font-size: 40px;
+  font-size: 50px;
   font-family:monospace;
 }
 
@@ -37,7 +38,7 @@
 @media (max-width: 576px) {
   /* Make the top bar and nav link gaps smaller on mobile devices */
   .top-bar {
-    height: 40px;
+    height: 60px;
   }
 
   .nav-links a {
@@ -58,23 +59,98 @@
 .container {
   position: relative;
 }
-
-
-.products-container {
+.slider {
+  position: relative;
+  overflow:hidden;
+  padding:20px;
+}
+.slider-heading {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-family: monospace;
+  text-transform: capitalize;
+}
+.bck,
+.nxt {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
-  overflow-x: auto; /* Add horizontal scrollbar if the content overflows */
-  
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  z-index: 9;
+}
+.bck {
+  left: 0;
+  transform: rotate(180deg);
+}
+.nxt {
+  right: 0;
+}
+.bck img,
+.nxt img {
+  opacity: 0.2;
+}
+.bck:hover img,
+.nxt:hover img {
+  opacity: 1;
+} 
+.collection-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.collection {
+  position: relative;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+  grid-column: span 2;
+  margin-bottom: 10px;
+}
+
+.products-container {
+padding: 0 10vw;
+display: flex;
+overflow-x: auto;
+scroll-behavior: smooth;
+}
+.products-container::-webkit-scrollbar {
+display: none;
 }
 .product {
   flex: 0 0 auto; /* Do not grow, do not shrink, use auto width */
   width: 30%; /* Set the width to 20% to create a 1x5 row */
-  max-width: 330px; /* Adjust as needed */
+  max-width: 300px; /* Adjust as needed */
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 10px;
+  margin-right: 40px;
   text-align: center;
   box-sizing: border-box; /* Include padding and border in the total width */
 }
@@ -85,7 +161,7 @@
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 10px;
+  margin-right: 40px;
   text-align: center;
   box-sizing: border-box; /* Include padding and border in the total width */
 }
@@ -96,7 +172,18 @@
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 10px;
+  margin-right: 40px;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in the total width */
+}
+.productdm {
+  flex: 0 0 auto; /* Do not grow, do not shrink, use auto width */
+  width: 40%; /* Set the width to 20% to create a 1x5 row */
+  max-width: 850px; /* Adjust as needed */
+  height: 500px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin-right: 40px;
   text-align: center;
   box-sizing: border-box; /* Include padding and border in the total width */
 }
@@ -107,6 +194,7 @@
   border: 3px solid #000000;
   box-sizing: border-box;
   vertical-align: top; 
+  overflow: hidden;
 }
 
 .productkeyb img {
@@ -116,6 +204,7 @@
   border: 3px solid #000000;
   box-sizing: border-box;
   vertical-align: top;
+  overflow: hidden;
 }
 .productmon img {
   width: 100%;
@@ -124,7 +213,18 @@
   border: 3px solid #000000;
   box-sizing: border-box;
   vertical-align: top;
+  overflow: hidden;
 }
+.productdm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  vertical-align: top;
+  overflow: hidden;
+}
+
 
 
 .textoverlay1 {
@@ -147,45 +247,32 @@
   position:static;
   text-align: center;
   font-size: 35px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:monospace;
 }
 
 
 body {
   margin: 0;
+  background-color: #fff;
+}
+.address {
+  position:fixed;
+  font-family: monospace;
+  text-align: left;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color:#333;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 }
-.signin-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.close {
+.footer .address {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
+  bottom: 10px; /* Adjust this value for desired spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust width as needed */
 }

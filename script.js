@@ -1,16 +1,4 @@
 
-// Function to open the sign-in modal
-function openSignInModal() {
-  var modal = document.getElementById('signinModal');
-  modal.style.display = 'flex';
-}
-
-// Function to close the sign-in modal
-function closeSignInModal() {
-  var modal = document.getElementById('signinModal');
-  modal.style.display = 'none';
-}
-
 // Function to handle sign-in
 function signIn(event) {
   event.preventDefault(); // Prevent the form from submitting
@@ -22,22 +10,46 @@ function signIn(event) {
   // Perform authentication (add your own logic here)
   // For simplicity, let's assume a hardcoded username and password
   if (username === 'ethan' && password === '123') {
-    alert('Sign-in successful!');
-    closeSignInModal();
-    // Change the text of the "Sign In" link to "Account"
-    var signInButton = document.getElementById('signin-link');
-    signInButton.innerHTML = 'Account';
+    alert('Sign-in successful!'); // Or any action you want on successful login
+    // You can redirect the user to another page upon successful login
+    window.location.href = 'account.html'; // Redirect to the user's account page
   } else {
     alert('Invalid username or password. Please try again.');
   }
 }
+//slider//
+document.addEventListener('DOMContentLoaded', () => {
+  const backButton = document.querySelector('.bck');
+  const nextButton = document.querySelector('.nxt');
+  const productsContainer = document.querySelector('.products-container');
 
+  let scrollPosition = 0;
+  const scrollAmount = 340; // Adjust this value to determine how much to scroll per click
 
+  // Function to handle moving the slider backward
+  backButton.addEventListener('click', () => {
+    if (scrollPosition > 0) {
+      scrollPosition -= scrollAmount;
+      productsContainer.scrollTo({
+        top: 0,
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
 
-// Function to simulate signing in (replace this with your actual sign-in logic)
-function simulateSignIn() {
-  // Assuming the user has successfully signed in
-  // Change the text of the "Sign In" button to "Account"
-  var signInButton = document.getElementById('signin-link');
-  signInButton.innerHTML = 'Account';
-}
+  // Function to handle moving the slider forward
+  nextButton.addEventListener('click', () => {
+    const containerWidth = productsContainer.clientWidth;
+    const totalWidth = productsContainer.scrollWidth;
+
+    if (scrollPosition < totalWidth - containerWidth) {
+      scrollPosition += scrollAmount;
+      productsContainer.scrollTo({
+        top: 0,
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
