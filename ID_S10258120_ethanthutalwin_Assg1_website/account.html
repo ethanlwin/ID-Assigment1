@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GameGearhouse</title>
+  <!-- External stylesheets -->
+  <link rel="normalize" href="normalize.css"> <!-- Link to normalize.css file -->
+  <link rel="stylesheet" href="style.css"> <!-- Link to style.css file -->
+  <!-- External JavaScript -->
+  <script src="script.js"></script> <!-- Link to script.js file -->
+</head>
+<body>
+  <!-- Header section -->
+  <header class="top-bar">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="indexsign.html">GameGearhouse</a> <!-- Link to indexsign.html with the website name -->
+    </div>
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a id="home-link" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="indexsign.html">Home</a>
+      <a id="product-link" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="products.html">Products</a>
+      <a id="about-link" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="aboutsign.html">About</a>
+      <a id="contact-link" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'" href="contact.html">Contact</a>
+      <a id="account" href="account.html" style="font-weight: bold;">Account</a>
+      <a id="logout" href ="index.html" onMouseOver="this.style.fontWeight='bold'" onMouseOut="this.style.fontWeight='normal'">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Account Container -->
+  <div class="account-container">
+    <!-- Profile Section -->
+    <div class="profile">
+      <h2>Rinn: Profile Picture</h2>
+      <div class="profile-picture">
+        <img src="images/profile-picture.jpg" alt="Profile Picture">
+      </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p>ethan.thutalwin@gmail.com</p>
+    </div>
+
+    <!-- Favorite Products Section -->
+    <div class="favorite-products">
+      <h2>Favorite Products</h2>
+      <div class="product-list">
+        <!-- Display favorite products with borders -->
+        <div class="product-fav">
+          <img src="images/artisan-hien.jpg" style="height: 300px;">
+        </div>
+        <div class="product-fav">
+          <img src="images/wootingpicture.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Base Section -->
+  <footer class="footer">
+    <p class="address">1 ABC Road, Level 1 Unit 01</p>
+    <p style="font-family: monospace; font-size: 30px;">2023 GameGearhouse</p>
+  </footer>
+</body>
+</html>

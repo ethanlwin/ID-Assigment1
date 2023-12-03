@@ -24,9 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const productsContainer = document.querySelector('.products-container');
 
   let scrollPosition = 0;
-  const scrollAmount = 340; // Adjust this value to determine how much to scroll per click
+  const scrollAmount = 340;
 
-  // Function to handle moving the slider backward
   backButton.addEventListener('click', () => {
     if (scrollPosition > 0) {
       scrollPosition -= scrollAmount;
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Function to handle moving the slider forward
   nextButton.addEventListener('click', () => {
     const containerWidth = productsContainer.clientWidth;
     const totalWidth = productsContainer.scrollWidth;
@@ -48,6 +46,39 @@ document.addEventListener('DOMContentLoaded', () => {
       productsContainer.scrollTo({
         top: 0,
         left: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+
+  // New references for the second slider
+  const backButtonBrands = document.querySelector('.bck-brands');
+  const nextButtonBrands = document.querySelector('.nxt-brands');
+  const productsContainerBrands = document.querySelector('.products-container-brands');
+
+  let scrollPositionBrands = 0;
+  const scrollAmountBrands = 340;
+
+  backButtonBrands.addEventListener('click', () => {
+    if (scrollPositionBrands > 0) {
+      scrollPositionBrands -= scrollAmountBrands;
+      productsContainerBrands.scrollTo({
+        top: 0,
+        left: scrollPositionBrands,
+        behavior: 'smooth'
+      });
+    }
+  });
+
+  nextButtonBrands.addEventListener('click', () => {
+    const containerWidthBrands = productsContainerBrands.clientWidth;
+    const totalWidthBrands = productsContainerBrands.scrollWidth;
+
+    if (scrollPositionBrands < totalWidthBrands - containerWidthBrands) {
+      scrollPositionBrands += scrollAmountBrands;
+      productsContainerBrands.scrollTo({
+        top: 0,
+        left: scrollPositionBrands,
         behavior: 'smooth'
       });
     }

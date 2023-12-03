@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
   <title>Sign In - GameGearhouse</title>
   <!-- Include necessary CSS files here -->
   <link rel="stylesheet" href="normalize.css">
@@ -10,10 +11,11 @@
     /* Add specific styles for the sign-in page here */
     /* For example, input fields, buttons, etc. */
   </style>
-</head>
-<body>
+  </head>
+  <body>
   <!-- Your sign-in form content -->
-  <div class="signin-container">
+  <div class="si-container">
+    <div class="signin-container">
     <h2>Sign In</h2>
     <form onsubmit="signIn(event)">
       <label for="username">Username:</label>
@@ -25,8 +27,11 @@
       <button type="submit">Sign In</button>
     </form>
   </div>
-
+  <div class="si-logo">
+    <a href="indexsign.html" style="text-decoration: none; color: black;">GameGearhouse</a>
+  </div>
   <!-- Include your JavaScript file -->
   <script src="script.js"></script>
 </body>
+</div>
 </html>
