@@ -401,7 +401,7 @@ body {
   box-sizing: border-box;
   font-family: monospace;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .favorite-products h2 {
@@ -424,7 +424,6 @@ body {
   object-fit: cover;
 }
 /* Mobile device view */
-@media (max-width: 576px) {
 /* Adjust account container layout */
 .account-container {
   flex-direction: column; /* Align items in a column on smaller screens */
