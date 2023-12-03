@@ -1,3 +1,4 @@
+/*The stylings for the top bar*/
 .top-bar {
   background-color: #333;
   color: #fff;
@@ -6,7 +7,7 @@
   justify-content: space-between;
   width: 100%;
 }
-
+/* stylings for the gamegearhouse logo*/
 .logo {
   flex: 1;
 }
@@ -17,7 +18,7 @@
   font-size: 50px;
   font-family:monospace;
 }
-
+/* stylings for the nav bar and items */
 .nav-links {
   display: flex;
   flex-direction: row;
@@ -46,11 +47,13 @@
 .container {
   position: relative;
 }
+/* Styling for the sliders */
 .slider {
   position: relative;
   overflow:hidden;
   padding:20px ;
 }
+/* Styling for the slider heading */
 .slider-heading {
   padding: 0 10vw;
   font-size: 30px;
@@ -59,6 +62,7 @@
   font-family: monospace;
   text-transform: capitalize;
 }
+/* Styles for the backward and next navigation buttons */
 .bck {
   border: none;
   width: 10vw;
@@ -102,13 +106,14 @@
 .nxt:hover img {
   opacity: 1;
 } 
+/* Styling for the collection container */
 .collection-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
-
+/* Styles for each collection item */
 .collection {
   position: relative;
 }
@@ -129,12 +134,16 @@
   font-size: 50px;
   text-transform: capitalize;
 }
-
+/* Adjustments for specific collection items */
 .collection:nth-child(3) {
   grid-column: span 2;
   margin-bottom: 10px;
 }
-
+/* Hide scrollbar for the products container */
+.products-container::-webkit-scrollbar {
+  display: none;
+  }
+/* Styles for the products container */
 .products-container {
 padding: 0 10vw;
 display: flex;
@@ -142,54 +151,52 @@ overflow-x: auto;
 scroll-behavior: smooth;
 margin-bottom: 50px;
 }
-.products-container::-webkit-scrollbar {
-display: none;
-}
+/* the product containers*/
 .product {
-  flex: 0 0 auto; /* Do not grow, do not shrink, use auto width */
-  width: 30%; /* Set the width to 20% to create a 1x5 row */
-  max-width: 300px; /* Adjust as needed */
+  flex: 0 0 auto; 
+  width: 30%; 
+  max-width: 300px; 
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
   margin-right: 40px;
   margin-bottom: 100px;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in the total width */
+  box-sizing: border-box; 
 }
 .productkeyb {
-  flex: 0 0 auto; /* Do not grow, do not shrink, use auto width */
-  width: 30%; /* Set the width to 20% to create a 1x5 row */
-  max-width: 550px; /* Adjust as needed */
+  flex: 0 0 auto; 
+  width: 30%; 
+  max-width: 550px; 
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
   margin-right: 40px;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in the total width */
+  box-sizing: border-box; 
 }
 .productmon {
-  flex: 0 0 auto; /* Do not grow, do not shrink, use auto width */
-  width: 30%; /* Set the width to 20% to create a 1x5 row */
-  max-width: 700px; /* Adjust as needed */
+  flex: 0 0 auto; 
+  width: 30%; 
+  max-width: 700px; 
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
   margin-right: 40px;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in the total width */
+  box-sizing: border-box;
 }
 .productdm {
-  flex: 0 0 auto; /* Do not grow, do not shrink, use auto width */
-  width: 40%; /* Set the width to 20% to create a 1x5 row */
-  max-width: 850px; /* Adjust as needed */
+  flex: 0 0 auto; 
+  width: 40%; 
+  max-width: 850px; 
   height: 500px;
   border: 1px solid #000000;
   padding: 10px;
   margin-right: 40px;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in the total width */
-}
+  box-sizing: border-box; 
+}/* these are the stylings for the product images*/
   .product img {
   width: 100%;
   height: 100%;
@@ -229,7 +236,7 @@ display: none;
 }
 
 
-
+/* text overly for the banner */
 .textoverlay1 {
   position: absolute;
   top: 48%;
@@ -245,7 +252,7 @@ display: none;
 
 
 
-
+/* these are the text overlay for the products*/
 .textoverlay2 {
   position:static;
   text-align: center;
@@ -259,11 +266,12 @@ display: none;
   font-family: monospace;
 }
 
-
+/*the backgound*/
 body {
   margin: 0;
   background-color: #fff;
 }
+/* The bottom banner of the page, with the address*/
 .address {
   position:fixed;
   font-family: monospace;
@@ -302,8 +310,8 @@ body {
   font-family: monospace;
   position: relative;
   z-index: 1;
-  width: 400px; /* Adjust the width to your desired size */
-  max-width: 80%; /* Set a maximum width if needed */
+  width: 400px;
+  max-width: 80%;
   /* Center the box horizontally */
   margin-left: auto;
   margin-right: auto;
@@ -322,7 +330,7 @@ body {
   max-width: 300px;
   margin: 5px;
 }
-.si-logo {
+.si-logo { /*gamegearhouse logo*/
   font-family: monospace;
   font-size: 40px;
   text-align: center;
@@ -334,11 +342,9 @@ body {
 }
 @media (max-width: 768px) {
   /* Adjust styles for smaller screens */
-  /* For example, reduce font sizes, adjust paddings, etc. */
   .signin-container {
     width: 80%; /* Adjust width for smaller screens */
   }
-  /* Other adjustments as needed */
 }
 
 /*account page*/
@@ -410,15 +416,15 @@ body {
 }
 
 .product-fav {
-  flex: 0 0 calc(20% - 20px); /* Adjust the width as needed */
+  flex: 0 0 calc(20% - 20px); /* the width */
   border: 2px solid #000;
   padding: 10px;
   margin-bottom: 20px;
   box-sizing: border-box;
   object-fit: cover;
 }
-/* Add this inside your existing media query for mobile screens */
-
+/* Mobile device view */
+@media (max-width: 576px) {
 /* Adjust account container layout */
 .account-container {
   flex-direction: column; /* Align items in a column on smaller screens */
@@ -451,18 +457,19 @@ body {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Adjust product list items */
+
 .product-fav {
   flex: 0 0 100%; /* Full width for product items */
   margin-bottom: 10px; /* Add margin between products */
+}
 }
 /*about page*/
 .about-section {
   font-family: monospace;
   font-size: large;
-  max-width: 800px; /* Adjust the maximum width of the section */
+  max-width: 800px; /* the maximum width of the section */
   margin: 0 auto; /* Center the section horizontally */
-  padding: 20px; /* Add padding for better spacing */
+  padding: 20px; 
 }
 
 /* Center the individual subsections */
@@ -477,8 +484,8 @@ body {
 .backstory h2,
 .mission h2,
 .ceo-message h2 {
-  font-size: 24px; /* Example font size, adjust as needed */
-  font-weight: bold; /* Example font weight, adjust as needed */
+  font-size: 24px; /* font size */
+  font-weight: bold; /* font weight */
   margin-bottom: 10px; /* Space below the headers */
 }
 
